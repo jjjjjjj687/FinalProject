@@ -56,6 +56,7 @@ $(function(){
 
 $(document).on('click', "[type=checkbox]", function(event){  /* looks for a click on a button with an id of my-button */
     if($(event.target).is(':checked')) {
+        alert("Good job! You have completed one! Now do the rest. ");
         $(event.target).fadeOut(1000,function(){    //theres also slideDown and slideUp.//
         })
         $(event.target).next().fadeOut(1000,function(){    //theres also slideDown and slideUp.//
@@ -67,9 +68,21 @@ $('checkbox').siblings();
 })
 
 
+$(function(){
+    $("#boxcool").on('click',function(event) {  /* looks for a click on a button with an id of my-button */
 
 
+    $("#id").css({
+        'font-size' : '10px',
+        'width' : '30px',
+        'height' : '10px',
+        'animation-name': 'example',
+        'animation-duration': '4s'
+     });
 
+        
+    });
+    });
 
 
 $(function(){
@@ -83,52 +96,6 @@ $(function(){
         
     });
     });
-
-    $(function(){
-        $("#a").on('click',function(event) {  /* looks for a click on a button with an id of my-button */
-            alert("yay you completed one");
-            $("#a").fadeOut(1000,function(){    //theres also slideDown and slideUp.//
-            })
-            $("#b").fadeOut(1000,function(){    //theres also slideDown and slideUp.//
-            })
-        });
-        });
-
-        $(function(){
-            $("#aa").on('click',function(event) {  /* looks for a click on a button with an id of my-button */
-                alert("yay you completed one");
-                $("#aa").fadeOut(1000,function(){    //theres also slideDown and slideUp.//
-                })
-                $("#bb").fadeOut(1000,function(){    //theres also slideDown and slideUp.//
-                })
-            });
-            });
-
-
-            $(function(){
-                $("#3").on('click',function(event) {  /* looks for a click on a button with an id of my-button */
-                    alert("yay you completed one");
-                    $("#3").fadeOut(1000,function(){    //theres also slideDown and slideUp.//
-                    })
-                    $("#4").fadeOut(1000,function(){    //theres also slideDown and slideUp.//
-                    })
-                });
-                });
-
-
-                $(function(){
-                    $("#d").on('click',function(event) {  /* looks for a click on a button with an id of my-button */
-                        alert("yay you completed one");
-                        $("#d").fadeOut(1000,function(){    //theres also slideDown and slideUp.//
-                        })
-                        $("#daa").fadeOut(1000,function(){    //theres also slideDown and slideUp.//
-                        })
-                    });
-                    });
-        
-
-
-
 
 
 
@@ -156,9 +123,10 @@ $(function() {
 $(document).on("click", "[type=checkbox]", function(event){
 $('#checkbox').click(function(event){
     if($(event.target).is(':checked')) {
-
+        alert("Good job! You have completed one! Now do the rest.");
         $(event.target).fadeOut(100,function(){
         })
+        
 }
 });
 
@@ -171,40 +139,42 @@ $('#checkbox').siblings();
 
 
 
-function execute(){
-    var form;
-    var constructor = new Constructor();
-    var builder = new BidFormBuilder();
-    constructor.setFormBuilder(builder);
-    constructor.constructForm();
-    constructor.displayForm();
-    form = constructor.getForm();
-    form.getSubmitButton().onclick = function cl() {
-        var phone = form.getPhone().childNodes[1].childNodes[1];
-        if (phone.value === '') {
-            for (let i = 0; i < cars.length; i++) {
-                $(function(){
-                    $("#a").on('click',function(event) {  /* looks for a click on a button with an id of my-button */
-                        alert("yay you completed one");
-                        $("#a").fadeOut(1000,function(){    //theres also slideDown and slideUp.//
-                        })
-                        $("#b").fadeOut(1000,function(){    //theres also slideDown and slideUp.//
-                        })
-                    });
-                    });
-            
-                    $(function(){
-                        $("#aa").on('click',function(event) {  /* looks for a click on a button with an id of my-button */
-                            alert("yay you completed one");
-                            $("#aa").fadeOut(1000,function(){    //theres also slideDown and slideUp.//
-                            })
-                            $("#bb").fadeOut(1000,function(){    //theres also slideDown and slideUp.//
-                            })
-                        });
-                        });
-                execute();
-              }
-            
-        }
-    };
-}
+$(function(){
+    $("#guess").on('click',function(event) {  /* looks for a click on a button with an id of my-button */
+        num = parseInt(document.getElementById("num").value); 
+    
+    if(num > number) { 
+            alert("Too big, try again");
+    }
+    
+    if(num < number) {
+            alert("Too small, try again")
+
+    }
+
+    if(num == number) {
+        alert("YOU GOT IT YAY")
+
+    }
+
+        
+    });
+    });
+
+
+
+
+
+
+
+
+    $(function(){
+        $('#second-parent').click(function(){
+            e1 = $('#first-child');
+            e1.addClass('animate');
+            e1.one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
+            function (e) {
+                e1.removeClass('animate');
+            });
+        });
+    });
